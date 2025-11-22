@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boop | Raj Contractor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+            flex-direction: column;
+        }
+
+        .boop-container {
+            text-align: center;
+        }
+
+        .boop-btn {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ff4d4d, #cc0000);
+            border: none;
+            box-shadow:
+                0 10px 20px rgba(0, 0, 0, 0.3),
+                inset 0 5px 10px rgba(255, 255, 255, 0.3),
+                inset 0 -5px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.1s;
+            outline: none;
+            position: relative;
+        }
+
+        .boop-btn:active {
+            transform: scale(0.95);
+            box-shadow:
+                0 5px 10px rgba(0, 0, 0, 0.3),
+                inset 0 5px 10px rgba(0, 0, 0, 0.5);
+            background: radial-gradient(circle at 30% 30%, #e60000, #990000);
+        }
+
+        .boop-text {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boop-container">
+        <button id="boopBtn" class="boop-btn" aria-label="Boop Button"></button>
+        <p class="boop-text">Press the button.</p>
+        <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+    </div>
+
+    <script>
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playBoop() {
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // A4
+            oscillator.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.1); // Slide up to A5
+
+            gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.1);
+        }
+
+        const btn = document.getElementById('boopBtn');
+        btn.addEventListener('mousedown', playBoop);
+        // Also support touch for mobile
+        btn.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Prevent mouse emulation
+            playBoop();
+            btn.classList.add('active');
+        });
+        btn.addEventListener('touchend', () => {
+            btn.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
