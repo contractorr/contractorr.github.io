@@ -11,5 +11,5 @@ def extract_text_from_pdf(pdf_path):
         return str(e)
 
 if __name__ == "__main__":
-    pdf_path = "CV (2).pdf"
+    pdf_path = "Raj-Contractor-CV.pdf"
     print(extract_text_from_pdf(pdf_path))

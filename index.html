@@ -6,160 +6,294 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raj Contractor | AI Product Manager</title>
     <meta name="description"
-        content="Portfolio of Raj Contractor, an AI Product Manager bridging the gap between Data, AI, and Product Strategy.">
+        content="Portfolio of Raj Contractor, an AI product manager focused on integrations, workflow automation, and data-heavy products.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Space+Grotesk:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
 </head>
 
 <body>
+    <div class="page-glow page-glow-a" aria-hidden="true"></div>
+    <div class="page-glow page-glow-b" aria-hidden="true"></div>
+
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Raj Contractor</a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <a href="#top" class="logo">Raj Contractor</a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="site-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="Raj-Contractor-CV.pdf" target="_blank" rel="noreferrer">CV</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Raj Contractor</h1>
-                <h2 class="hero-subtitle">Product Manager & AI Specialist</h2>
-                <p class="hero-tagline">Automating manual tasks, workflows and data pipelines using AI</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    <header class="hero" id="top">
+        <div class="container hero-grid">
+            <div class="hero-copy" data-reveal>
+                <p class="eyebrow">AI product manager | integrations | data systems</p>
+                <h1>I build AI products that turn manual workflows into dependable systems.</h1>
+                <p class="hero-intro">
+                    I am currently a Product Manager II at Carta, focused on integrating Accelex's document collection
+                    and data intelligence capabilities into Carta's broader platform. My background spans physics, data
+                    engineering, and product leadership across AI, APIs, and operations-heavy workflows.
+                </p>
+                <div class="hero-actions">
+                    <a href="Raj-Contractor-CV.pdf" class="btn btn-primary" target="_blank" rel="noreferrer">Download CV</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
                 </div>
+                <dl class="hero-meta">
+                    <div>
+                        <dt>Based in</dt>
+                        <dd>London, UK</dd>
+                    </div>
+                    <div>
+                        <dt>Email</dt>
+                        <dd><a href="mailto:rajcontractor@hotmail.co.uk">rajcontractor@hotmail.co.uk</a></dd>
+                    </div>
+                    <div>
+                        <dt>Links</dt>
+                        <dd>
+                            <a href="https://www.linkedin.com/in/raj-contractor/" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <span>/</span>
+                            <a href="https://github.com/contractorr" target="_blank" rel="noreferrer">GitHub</a>
+                        </dd>
+                    </div>
+                </dl>
             </div>
-            <div class="hero-image-container">
-                <img src="profile.jpg" alt="Raj Contractor" class="profile-img">
-            </div>
+
+            <aside class="hero-panel" data-reveal>
+                <img src="profile.jpg" alt="Portrait of Raj Contractor" class="profile-img">
+                <div class="hero-panel-body">
+                    <p class="panel-label">Current Focus</p>
+                    <h2>Carta integration, LP workflows, and platform connectivity</h2>
+                    <p>
+                        Defining how document collection, data intelligence, APIs, and MCP-enabled workflows fit into
+                        a unified LP experience.
+                    </p>
+                </div>
+                <div class="hero-panel-points">
+                    <div class="panel-point">
+                        <strong>$1m+</strong>
+                        <span>ARR generated by the LP document collection product launched at Accelex.</span>
+                    </div>
+                    <div class="panel-point">
+                        <strong>API-led</strong>
+                        <span>Experience across REST, GraphQL, webhooks, and third-party data integrations.</span>
+                    </div>
+                    <div class="panel-point">
+                        <strong>Hands-on</strong>
+                        <span>Started in data engineering and still work comfortably with SQL, Python, and technical delivery teams.</span>
+                    </div>
+                </div>
+            </aside>
         </div>
-        <div class="hero-background"></div>
+
+        <div class="container metric-strip" data-reveal>
+            <article class="metric-card">
+                <span class="metric-value">8+ years</span>
+                <p>Shipping across product, data engineering, and technical analysis roles.</p>
+            </article>
+            <article class="metric-card">
+                <span class="metric-value">Accelex to Carta</span>
+                <p>Delivered product growth, integrations, and post-acquisition platform alignment.</p>
+            </article>
+            <article class="metric-card">
+                <span class="metric-value">AI + ops</span>
+                <p>Strongest in messy workflow problems where automation has to earn trust.</p>
+            </article>
+        </div>
     </header>
 
     <main>
         <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <p>I am a Product Manager with a technical background in Physics and Data Engineering.
-                        I specialize in building AI-driven products and scaling technical teams. 
-                        My experience spans from hands-on data engineering to leading product strategy
-                        for multi-million dollar revenue streams. Currently driving integration at Carta.</p>
+            <div class="container section-shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">About</p>
+                    <h2>Product thinking grounded in technical delivery.</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-copy" data-reveal>
+                        <p>
+                            My career started in technical analysis and data engineering before moving into product.
+                            That combination is still the core of how I work: understand the workflow in detail, find
+                            the highest-friction points, then shape a product that reduces effort without creating new
+                            operational risk.
+                        </p>
+                        <p>
+                            I am most effective in environments that sit between product strategy and technical
+                            execution, especially where AI features, integrations, and external data systems all have to
+                            work together to unlock revenue.
+                        </p>
+                    </div>
+                    <div class="focus-card" data-reveal>
+                        <h3>Where I add leverage</h3>
+                        <ul class="focus-list">
+                            <li>Designing AI-assisted workflows for document-heavy or operations-heavy teams.</li>
+                            <li>Turning integration work into product surface area, not just implementation overhead.</li>
+                            <li>Working closely with engineering, UX, and data teams to keep roadmaps grounded in evidence.</li>
+                            <li>Bridging technical constraints with commercial priorities and customer adoption.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
+            <div class="container section-shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">Experience</p>
+                    <h2>Recent roles and delivery highlights.</h2>
+                </div>
                 <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Sep 2025 – Present</div>
+                    <article class="timeline-card" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">Sep 2025 - Present</p>
+                            <p class="timeline-company">Carta (via Accelex acquisition)</p>
+                        </div>
                         <div class="timeline-content">
                             <h3>Product Manager II</h3>
-                            <h4>Carta (via Accelex acquisition)</h4>
-                            <p>Driving integration between Accelex’s document collection and data intelligence products
-                                and Carta’s platform.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Mar 2023 – Sep 2025</div>
-                        <div class="timeline-content">
-                            <h3>AI Product Manager</h3>
-                            <h4>Accelex</h4>
+                            <p>
+                                Driving integration between Accelex's document collection and data intelligence
+                                products and Carta's fund administration platform.
+                            </p>
                             <ul>
-                                <li>Launched a product for LP document collection achieving over $1m ARR.</li>
-                                <li>Designed and scaled an AI-driven module for automated document retrieval.</li>
-                                <li>Managed integration strategy and launched public GraphQL API.</li>
+                                <li>Own roadmap definition for unified LP workflows across the combined product surface.</li>
+                                <li>Scope API, MCP, and data-connectivity strategy for Carta's LPPA product and partner ecosystem.</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jan 2022 – Mar 2023</div>
-                        <div class="timeline-content">
-                            <h3>Lead Business Analyst/Data Engineer</h3>
-                            <h4>Accelex</h4>
-                            <p>Delivered data integration projects using Python, SQL, and AWS Lambda.</p>
+                    </article>
+
+                    <article class="timeline-card" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">Mar 2023 - Sep 2025</p>
+                            <p class="timeline-company">Accelex</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Mar 2021 – Dec 2021</div>
+                        <div class="timeline-content">
+                            <h3>AI Product Manager</h3>
+                            <ul>
+                                <li>Launched an LP document collection and management product that grew to more than $1m ARR within two years.</li>
+                                <li>Designed and scaled an AI-driven retrieval and classification module for investor documents.</li>
+                                <li>Built and led a new integrations unit, expanding the product's addressable market and revenue base.</li>
+                                <li>Designed and launched the public GraphQL API while guiding architecture decisions across REST, GraphQL, and webhooks.</li>
+                                <li>Mentored junior PMs and led delivery rituals across cross-functional teams.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">Jan 2022 - Mar 2023</p>
+                            <p class="timeline-company">Accelex</p>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Lead Business Analyst / Data Engineer</h3>
+                            <ul>
+                                <li>Delivered data integration projects using Python, SQL, pandas, and AWS Lambda.</li>
+                                <li>Improved data capture accuracy across client portfolios through new integration capabilities.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">Mar 2021 - Dec 2021</p>
+                            <p class="timeline-company">IT Venture</p>
+                        </div>
                         <div class="timeline-content">
                             <h3>Data Engineer</h3>
-                            <h4>IT Venture</h4>
-                            <p>Built ETL pipelines using Python/SQL to migrate data at scale.</p>
+                            <p>Built ETL pipelines in Python and SQL to migrate data between systems at scale.</p>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">May 2018 – Mar 2021</div>
+                    </article>
+
+                    <article class="timeline-card" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">May 2018 - Mar 2021</p>
+                            <p class="timeline-company">Acturis</p>
+                        </div>
                         <div class="timeline-content">
                             <h3>Technical Business Analyst</h3>
-                            <h4>Acturis</h4>
-                            <p>Delivered SaaS solutions for insurance premium processing.</p>
+                            <ul>
+                                <li>Delivered database changes, maintained PL/SQL packages, and worked with version-controlled releases.</li>
+                                <li>Supported SaaS delivery for insurance premium processing across a full SDLC environment.</li>
+                            </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Personal Projects</h2>
+            <div class="container section-shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">Projects</p>
+                    <h2>Personal builds with a strong product angle.</h2>
+                </div>
                 <div class="projects-grid">
-                    <!-- Placeholder Project 1 -->
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3>Portfolio Website</h3>
-                            <p>A responsive, dark-themed personal portfolio website built with HTML, CSS, and
-                                JavaScript.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                    <article class="project-card" data-reveal>
+                        <div class="project-header">
+                            <div>
+                                <p class="project-status">Live</p>
+                                <h3>StewardMe</h3>
                             </div>
-                            <a href="#" class="project-link">View Code &rarr;</a>
+                            <a href="https://stewardme.ai" class="project-link" target="_blank" rel="noreferrer">Live site &rarr;</a>
+                        </div>
+                        <p>
+                            An open-source AI steward that combines personal context, live intelligence sources, and
+                            explainable recommendations to help users decide what to do next.
+                        </p>
+                        <ul class="project-points">
+                            <li>Combines journal entries, goals, and live source monitoring into a self-hosted advice loop.</li>
+                            <li>Runs as a CLI, web app, and MCP server with support for multiple LLM providers.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Next.js</span>
+                            <span>SQLite</span>
+                            <span>MCP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/contractorr/stewardme" target="_blank" rel="noreferrer">GitHub</a>
+                            <a href="https://stewardme.ai" target="_blank" rel="noreferrer">Demo</a>
                         </div>
                     </article>
-                    <!-- Placeholder Project 2 -->
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3>AI Document Classifier</h3>
-                            <p>A conceptual prototype for classifying financial documents using NLP techniques.</p>
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>NLP</span>
-                                <span>TensorFlow</span>
+
+                    <article class="project-card" data-reveal>
+                        <div class="project-header">
+                            <div>
+                                <p class="project-status">In progress</p>
+                                <h3>repoinspo</h3>
                             </div>
-                            <a href="#" class="project-link">View Code &rarr;</a>
+                            <a href="https://github.com/contractorr/repoinspo" class="project-link" target="_blank" rel="noreferrer">GitHub &rarr;</a>
                         </div>
-                    </article>
-                    <!-- Placeholder Project 3 -->
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3>Boop</h3>
-                            <p>A highly interactive web experience featuring a button that makes a "Boop" sound.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>Web Audio API</span>
-                            </div>
-                            <a href="boop.html" class="project-link">Go Boop &rarr;</a>
+                        <p>
+                            A repository analysis tool for understanding a codebase, finding similar repos, and
+                            surfacing portable ideas worth adapting into new products.
+                        </p>
+                        <ul class="project-points">
+                            <li>Uses GitHub search, structured LLM analysis, and typed models to turn repositories into actionable product insight.</li>
+                            <li>Designed to work both as a CLI and as an MCP server for coding environments.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Typer</span>
+                            <span>LiteLLM</span>
+                            <span>FAISS</span>
+                            <span>MCP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/contractorr/repoinspo" target="_blank" rel="noreferrer">Repository</a>
                         </div>
                     </article>
                 </div>
@@ -167,68 +301,88 @@
         </section>
 
         <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Skills & Education</h2>
+            <div class="container section-shell">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">Skills</p>
+                    <h2>Tools, platforms, and methods I use most.</h2>
+                </div>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Languages</h3>
+                    <article class="skill-card" data-reveal>
+                        <h3>Product</h3>
+                        <div class="skill-list">
+                            <span>Roadmapping</span>
+                            <span>Discovery</span>
+                            <span>Agile / Scrum</span>
+                            <span>Backlog management</span>
+                            <span>Stakeholder alignment</span>
+                        </div>
+                    </article>
+                    <article class="skill-card" data-reveal>
+                        <h3>Integrations</h3>
+                        <div class="skill-list">
+                            <span>REST APIs</span>
+                            <span>GraphQL</span>
+                            <span>Webhooks</span>
+                            <span>MCP</span>
+                            <span>Data connectivity</span>
+                        </div>
+                    </article>
+                    <article class="skill-card" data-reveal>
+                        <h3>Data & AI</h3>
                         <div class="skill-list">
                             <span>SQL</span>
                             <span>Python</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools</h3>
-                        <div class="skill-list">
                             <span>Pandas</span>
+                            <span>AI workflow design</span>
+                            <span>Document automation</span>
+                        </div>
+                    </article>
+                    <article class="skill-card" data-reveal>
+                        <h3>Platforms</h3>
+                        <div class="skill-list">
+                            <span>AWS</span>
+                            <span>Databricks</span>
                             <span>Git</span>
                             <span>Jira</span>
                             <span>Confluence</span>
                         </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Cloud & Platforms</h3>
-                        <div class="skill-list">
-                            <span>AWS</span>
-                            <span>Databricks</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Product</h3>
-                        <div class="skill-list">
-                            <span>Agile/Scrum</span>
-                            <span>Waterfall</span>
-                            <span>Product Strategy</span>
-                        </div>
-                    </div>
+                    </article>
                 </div>
-                <div class="education-block">
-                    <h3>Education</h3>
-                    <p><strong>MPhys (Hons) Physics (2.1)</strong> - University of Manchester (2013 – 2017)</p>
-                    <p class="education-detail">Entry Scholarship (£1,000) | University Water Polo Team Captain</p>
+                <div class="education-card" data-reveal>
+                    <p class="section-kicker">Education</p>
+                    <h3>MPhys (Hons) Physics (2.1), University of Manchester</h3>
+                    <p>2013 - 2017</p>
+                    <p>Entry Scholarship awarded for A*A*AA grades. University Water Polo Team Captain.</p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <p>Interested in discussing Product, AI, or Data? Feel free to reach out.</p>
+            <div class="container section-shell contact-shell" data-reveal>
+                <div class="section-heading">
+                    <p class="section-kicker">Contact</p>
+                    <h2>Open to product, AI, and integration conversations.</h2>
+                </div>
+                <p class="contact-copy">
+                    If you are building in AI, data-heavy operations, or workflow automation, I am always happy to
+                    compare notes.
+                </p>
+                <div class="contact-actions">
                     <a href="mailto:rajcontractor@hotmail.co.uk" class="btn btn-primary">Email Me</a>
-                    <div class="social-links">
-                        <!-- Add actual links if available, otherwise placeholders -->
-                        <a href="https://www.linkedin.com/in/raj-contractor/">LinkedIn</a>
-                        <a href="https://github.com/contractorr">GitHub</a>
-                    </div>
+                    <a href="Raj-Contractor-CV.pdf" class="btn btn-secondary" target="_blank" rel="noreferrer">Open CV</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/raj-contractor/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com/contractorr" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Raj Contractor. All rights reserved.</p>
+        <div class="container footer-content">
+            <p>&copy; 2026 Raj Contractor</p>
+            <a href="Raj-Contractor-CV.pdf" target="_blank" rel="noreferrer">Latest CV</a>
         </div>
     </footer>
 
