@@ -624,6 +624,10 @@ ul {
     text-align: center;
 }
 
+.contact-shell .section-heading {
+    text-align: left;
+}
+
 .contact-copy {
     max-width: 40rem;
     margin: 1.2rem auto 0;
