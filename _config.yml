@@ -1,0 +1,26 @@
+title: Raj Contractor
+description: Product manager working on AI, integrations, and data-heavy workflows. Based in London.
+url: "https://contractorr.github.io"
+baseurl: ""
+author: Raj Contractor
+timezone: Europe/London
+
+markdown: kramdown
+permalink: /blog/:year/:month/:title/
+
+plugins:
+  - jekyll-feed
+
+# Don't publish these
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - extract_cv.py
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

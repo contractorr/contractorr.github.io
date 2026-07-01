@@ -1,0 +1,489 @@
+/* ------------------------------------------------------------------
+   Raj Contractor — personal site
+   Minimalist editorial: warm paper background, Newsreader headings,
+   system sans body, single green accent. Dark mode via media query.
+------------------------------------------------------------------- */
+
+:root {
+    --bg: #faf9f6;
+    --text: #22211e;
+    --muted: #6f6d64;
+    --accent: #2e5b47;
+    --accent-soft: #3d7a5f;
+    --rule: #e7e4db;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #151715;
+        --text: #e6e4dc;
+        --muted: #98968b;
+        --accent: #8ec2a6;
+        --accent-soft: #a7d2ba;
+        --rule: #2b2e2a;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    max-width: 42rem;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 120ms ease;
+}
+
+a:hover {
+    border-bottom-color: currentColor;
+}
+
+/* ---------------------------------------------------------------
+   Nav
+--------------------------------------------------------------- */
+
+.site-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 2.25rem 0 0;
+}
+
+.site-name {
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.nav-links a.active {
+    border-bottom-color: currentColor;
+}
+
+/* ---------------------------------------------------------------
+   Home
+--------------------------------------------------------------- */
+
+.home {
+    padding: 4.5rem 0 2rem;
+}
+
+.avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1.75rem;
+}
+
+.home h1 {
+    font-size: 2.6rem;
+    margin: 0 0 0.35rem;
+}
+
+.tagline {
+    color: var(--muted);
+    margin: 0 0 2.25rem;
+    font-size: 1rem;
+}
+
+.home-about p {
+    margin: 0 0 1.15rem;
+}
+
+.home-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    padding: 1.5rem 0 0;
+    margin: 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 2.25rem;
+}
+
+.home-links a {
+    font-size: 0.9375rem;
+}
+
+.home-writing {
+    margin-top: 3rem;
+}
+
+.home-writing h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.9rem;
+}
+
+/* ---------------------------------------------------------------
+   Page headers (CV, Blog)
+--------------------------------------------------------------- */
+
+main {
+    min-height: 60vh;
+}
+
+.page-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 3.5rem 0 0;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.page-header-aside {
+    color: var(--muted);
+    font-size: 0.9375rem;
+    margin: 0;
+    max-width: 26rem;
+}
+
+/* ---------------------------------------------------------------
+   CV
+--------------------------------------------------------------- */
+
+.cv h2 {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.5rem;
+    margin: 3rem 0 1.5rem;
+}
+
+.cv-entry {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cv-dates {
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin: 0.2rem 0 0;
+    white-space: nowrap;
+}
+
+.cv-entry-body h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.cv-note {
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.cv-entry-body ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.cv-entry-body li {
+    margin-bottom: 0.45rem;
+    font-size: 0.9875rem;
+}
+
+.cv-entry-body ul ul {
+    margin-top: 0.45rem;
+}
+
+.cv-entry-body ul ul li {
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
+.cv-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cv-skill-group h3 {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+}
+
+.cv-skill-group p {
+    color: var(--muted);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------
+   Blog
+--------------------------------------------------------------- */
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-list li {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 0.15rem 1rem;
+    align-items: baseline;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.post-list li:first-child {
+    border-top: 1px solid var(--rule);
+}
+
+.post-list.compact li {
+    border: none;
+    padding: 0.25rem 0;
+}
+
+.post-list-date {
+    color: var(--muted);
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.post-list a {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.post-list a:hover {
+    color: var(--accent);
+    border-bottom-color: transparent;
+}
+
+.post-list-excerpt {
+    grid-column: 2;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    margin: 0.15rem 0 0;
+}
+
+.blog-empty {
+    color: var(--muted);
+}
+
+/* ---------------------------------------------------------------
+   Post
+--------------------------------------------------------------- */
+
+.post {
+    padding-top: 3.5rem;
+}
+
+.post-header {
+    margin-bottom: 2.25rem;
+}
+
+.post-date {
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin: 0 0 0.5rem;
+}
+
+.post-header h1 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.post-body p {
+    margin: 0 0 1.15rem;
+}
+
+.post-body h2 {
+    font-size: 1.5rem;
+    margin: 2.25rem 0 0.75rem;
+}
+
+.post-body h3 {
+    font-size: 1.2rem;
+    margin: 1.75rem 0 0.6rem;
+}
+
+.post-body img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.post-body blockquote {
+    margin: 1.5rem 0;
+    padding-left: 1.15rem;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+    font-family: var(--serif);
+    font-size: 1.1rem;
+}
+
+.post-body code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.875em;
+    background: var(--rule);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+}
+
+.post-body pre {
+    background: var(--rule);
+    padding: 1rem 1.15rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+.post-body pre code {
+    background: none;
+    padding: 0;
+}
+
+.post-body hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.25rem 0;
+}
+
+.post-back {
+    margin-top: 3rem;
+}
+
+.post-back a {
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
+.post-back a:hover {
+    color: var(--accent);
+}
+
+/* ---------------------------------------------------------------
+   Footer
+--------------------------------------------------------------- */
+
+.site-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    border-top: 1px solid var(--rule);
+    margin-top: 4.5rem;
+    padding: 1.5rem 0 2.5rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footer-links a {
+    color: var(--muted);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+/* ---------------------------------------------------------------
+   Mobile
+--------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .home {
+        padding-top: 3rem;
+    }
+
+    .home h1 {
+        font-size: 2.1rem;
+    }
+
+    .page-header {
+        padding-top: 2.5rem;
+    }
+
+    .cv-entry {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+
+    .cv-dates {
+        margin: 0;
+    }
+
+    .post-list li {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+    }
+
+    .post-list-excerpt {
+        grid-column: 1;
+    }
+}
