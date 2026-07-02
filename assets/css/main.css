@@ -111,15 +111,6 @@ a:hover {
     padding: 4.5rem 0 2rem;
 }
 
-.avatar {
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 1.75rem;
-}
-
 .home h1 {
     font-size: 2.6rem;
     margin: 0 0 0.35rem;
@@ -127,8 +118,16 @@ a:hover {
 
 .tagline {
     color: var(--muted);
-    margin: 0 0 2.25rem;
+    margin: 0 0 2rem;
     font-size: 1rem;
+}
+
+.home-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 2.25rem;
 }
 
 .home-about p {
